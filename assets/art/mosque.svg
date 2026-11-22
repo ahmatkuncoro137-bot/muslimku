@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 260" fill="none" role="img" aria-label="Ilustrasi masjid asli Muslimku">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="260">
+      <stop offset="0%" stop-color="#083525"/>
+      <stop offset="55%" stop-color="#0c5a3c"/>
+      <stop offset="100%" stop-color="#147a4d"/>
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3e2a0"/>
+      <stop offset="45%" stop-color="#d7b652"/>
+      <stop offset="100%" stop-color="#b08d2c"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e9f6ee"/>
+      <stop offset="100%" stop-color="#cfe6d5"/>
+    </linearGradient>
+    <linearGradient id="minaret" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d9eadc"/>
+      <stop offset="50%" stop-color="#f4fbf6"/>
+      <stop offset="100%" stop-color="#c3dcc9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#ffe9a3" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#ffe9a3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="412" height="260" fill="url(#sky)"/>
+  <ellipse cx="206" cy="80" rx="150" ry="70" fill="url(#glow)"/>
+  <!-- stars -->
+  <g fill="#f7e7b0" opacity=".9">
+    <circle cx="36" cy="28" r="1.4"/>
+    <circle cx="68" cy="48" r="1.1"/>
+    <circle cx="110" cy="22" r="1.6"/>
+    <circle cx="148" cy="40" r="1.2"/>
+    <circle cx="300" cy="26" r="1.5"/>
+    <circle cx="338" cy="44" r="1.1"/>
+    <circle cx="372" cy="20" r="1.4"/>
+    <circle cx="390" cy="58" r="1.2"/>
+    <circle cx="24" cy="72" r="1"/>
+    <circle cx="250" cy="18" r="1.2"/>
+  </g>
+  <!-- crescent moon -->
+  <path d="M338 38c8.5 0 16 6.2 17.6 14.6A16 16 0 1 1 328 38c3.2-1 6.5-1.5 10-1.5z" fill="#f8e7a8"/>
+  <!-- far hills -->
+  <path d="M0 200 C60 170 120 186 180 176 C250 164 300 186 412 168 L412 260 L0 260 Z" fill="#0a3d2c" opacity=".55"/>
+  <path d="M0 214 C80 198 140 210 220 200 C300 190 350 208 412 198 L412 260 L0 260 Z" fill="#0a4a34"/>
+  <!-- trees -->
+  <g fill="#083828">
+    <ellipse cx="42" cy="214" rx="18" ry="28"/>
+    <rect x="40" y="220" width="4" height="22" rx="1"/>
+    <ellipse cx="78" cy="220" rx="14" ry="22"/>
+    <rect x="76" y="226" width="4" height="18" rx="1"/>
+    <ellipse cx="370" cy="216" rx="20" ry="30"/>
+    <rect x="368" y="224" width="4" height="22" rx="1"/>
+    <ellipse cx="336" cy="222" rx="13" ry="20"/>
+  </g>
+  <!-- left minaret -->
+  <g>
+    <rect x="96" y="100" width="28" height="118" fill="url(#minaret)"/>
+    <rect x="90" y="148" width="40" height="10" rx="1" fill="#efe6c8"/>
+    <rect x="90" y="96" width="40" height="12" rx="1" fill="#efe6c8"/>
+    <polygon points="110,58 128,96 92,96" fill="url(#dome)"/>
+    <rect x="107" y="46" width="6" height="16" fill="#e8d48a"/>
+    <circle cx="110" cy="44" r="4" fill="#f8e7a8"/>
+    <rect x="104" y="112" width="6" height="12" rx="3" fill="#0b5c3a"/>
+    <rect x="110" y="132" width="6" height="12" rx="3" fill="#0b5c3a"/>
+  </g>
+  <!-- right minaret -->
+  <g>
+    <rect x="288" y="100" width="28" height="118" fill="url(#minaret)"/>
+    <rect x="282" y="148" width="40" height="10" rx="1" fill="#efe6c8"/>
+    <rect x="282" y="96" width="40" height="12" rx="1" fill="#efe6c8"/>
+    <polygon points="302,58 320,96 284,96" fill="url(#dome)"/>
+    <rect x="299" y="46" width="6" height="16" fill="#e8d48a"/>
+    <circle cx="302" cy="44" r="4" fill="#f8e7a8"/>
+    <rect x="296" y="112" width="6" height="12" rx="3" fill="#0b5c3a"/>
+    <rect x="302" y="132" width="6" height="12" rx="3" fill="#0b5c3a"/>
+  </g>
+  <!-- side small domes -->
+  <path d="M150 142 A28 22 0 0 1 206 142 L206 150 L150 150 Z" fill="url(#dome)"/>
+  <path d="M206 142 A28 22 0 0 1 262 142 L262 150 L206 150 Z" fill="url(#dome)"/>
+  <circle cx="178" cy="122" r="3" fill="#f8e7a8"/>
+  <circle cx="234" cy="122" r="3" fill="#f8e7a8"/>
+  <!-- main hall -->
+  <rect x="138" y="150" width="136" height="70" fill="url(#wall)"/>
+  <rect x="138" y="150" width="136" height="8" fill="#e8d9a0"/>
+  <!-- main dome -->
+  <path d="M160 150 C160 108 252 108 252 150 Z" fill="url(#dome)"/>
+  <rect x="203" y="86" width="6" height="18" fill="#e8d48a"/>
+  <path d="M206 74 a9 9 0 1 1 -8 5" stroke="#f8e7a8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- arches -->
+  <g fill="#0c5a3c">
+    <path d="M158 220 V186 A16 18 0 0 1 190 186 V220 Z"/>
+    <path d="M198 220 V178 A18 22 0 0 1 214 168 A18 22 0 0 1 230 178 V220 Z"/>
+    <path d="M238 220 V186 A16 18 0 0 1 270 186 V220 Z"/>
+  </g>
+  <rect x="204" y="196" width="4" height="24" fill="#e8d9a0"/>
+  <!-- courtyard steps -->
+  <rect x="120" y="220" width="172" height="8" fill="#cbb56a"/>
+  <rect x="108" y="228" width="196" height="10" fill="#b39b4e"/>
+  <!-- lamps -->
+  <circle cx="150" cy="200" r="3" fill="#ffe08a" opacity=".9"/>
+  <circle cx="262" cy="200" r="3" fill="#ffe08a" opacity=".9"/>
+</svg>
