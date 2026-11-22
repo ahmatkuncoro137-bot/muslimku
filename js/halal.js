@@ -29,7 +29,7 @@ function productImageOf(product, fallback) {
 }
 
 
-export function renderHalal(prefillExample = false) {
+export function renderHalal(prefillExample = false, exampleCode = '') {
   const view = document.getElementById('view-halal');
   view.innerHTML = `
     <div class="topbar"><h1>Halal Pro</h1></div>
@@ -78,12 +78,12 @@ export function renderHalal(prefillExample = false) {
   $('#show-example', view).addEventListener('click', showExample);
   $('#find-places', view).addEventListener('click', findPlaces);
   renderHistory();
-  if (prefillExample) showExample();
+  if (prefillExample) showExample(exampleCode);
 }
 
-function showExample() {
+function showExample(code = '') {
   const list = examples.products || [];
-  const main = list[0];
+  const main = (code && list.find((p) => p.code === code)) || list[0];
   if (!main) return;
   if ($('#ing-text')) $('#ing-text').value = main.ingredients_text || '';
   if ($('#barcode-input')) $('#barcode-input').value = main.code || '';
@@ -91,14 +91,14 @@ function showExample() {
   for (const prod of [...list].reverse()) {
     const hits = analyzeIngredients(prod.ingredients_text || '');
     const hasCert = certFound(prod.labels || '', prod.ingredients_text || '');
-    const word = hits.some((h) => h.verdict === 'haram') ? 'HARAM' : (hasCert ? 'HALAL' : 'SYUBHAT');
+    const decision = decide(hits, hasCert, prod.ingredients_text || '');
     pushHistory({
       code: prod.code,
       name: prod.name,
       brands: prod.brands,
       image: prod.image,
-      verdict: word,
-      kind: word.toLowerCase(),
+      verdict: decision.word,
+      kind: decision.kind,
       example: true,
       source: prod.source
     });
@@ -217,7 +217,6 @@ function normalize(s) {
 
 export function analyzeIngredients(text) {
   const original = normalize(text);
-  const lower = original.toLowerCase();
   const hits = [];
   const ignore = dict.ignore_substrings || [];
   // Build a masked copy so 酒 inside 醤油 is not counted.
@@ -251,30 +250,30 @@ function certFound(labels, text) {
   return tagHit || termHit;
 }
 
-function decide(hits, hasCert) {
+function decide(hits, hasCert, text) {
+  const empty = !String(text || '').trim();
   const haram = hits.filter((h) => h.verdict === 'haram');
   const syubhat = hits.filter((h) => h.verdict === 'syubhat');
-  if (haram.length) return { kind: 'haram', word: 'HARAM', lead: 'Ditemukan bahan yang secara jelas merujuk pada babi atau alkohol.' };
-  if (syubhat.length) return { kind: 'syubhat', word: 'SYUBHAT', lead: 'Ada bahan meragukan (sumber tidak jelas). Lebih aman dihindari sampai ada kepastian.' };
-  if (hasCert) return { kind: 'halal', word: 'HALAL', lead: 'Ada indikasi sertifikasi halal dan tidak ditemukan bahan haram/syubhat pada teks yang tersedia.' };
-  if (!String(arguments[2] || '').trim() && !hasCert) {
-    return { kind: 'unknown', word: 'BELUM JELAS', lead: 'Data bahan tidak cukup untuk menilai.' };
+  if (empty && !hasCert) return { kind: 'unknown', word: 'BELUM JELAS', lead: 'Data bahan tidak cukup untuk menilai.' };
+  if (haram.length) {
+    const onlyAnim = haram.every((h) => h.group === 'animal-oil');
+    const hasAnim = haram.some((h) => h.group === 'animal-oil');
+    let lead = 'Ditemukan bahan yang merujuk pada babi atau alkohol.';
+    if (onlyAnim) lead = 'Mengandung minyak/lemak hewani.';
+    else if (hasAnim) lead = 'Ditemukan bahan haram, termasuk minyak/lemak hewani.';
+    return { kind: 'haram', word: 'HARAM', lead };
   }
+  if (syubhat.length) {
+    return { kind: 'syubhat', word: 'SYUBHAT', lead: 'Ada bahan meragukan (sumber tidak jelas). Lebih aman dihindari sampai ada kepastian.' };
+  }
+  if (hasCert) return { kind: 'halal', word: 'HALAL', lead: 'Ada indikasi sertifikasi halal dan tidak ditemukan bahan haram/syubhat pada teks yang tersedia.' };
   return { kind: 'syubhat', word: 'SYUBHAT', lead: 'Tidak ditemukan bahan haram yang cocok, tetapi tanpa sertifikasi resmi kami tidak menyatakan halal secara pasti.' };
 }
 
 function showVerdict({ source, name, text, labels = '', brands = '', example = false, product = null, image = '', code = '' }) {
   const hits = analyzeIngredients(text);
   const hasCert = certFound(labels, text);
-  const empty = !String(text || '').trim();
-  let decision;
-  const haram = hits.filter((h) => h.verdict === 'haram');
-  const syubhat = hits.filter((h) => h.verdict === 'syubhat');
-  if (empty && !hasCert) decision = { kind: 'unknown', word: 'BELUM JELAS', lead: 'Data bahan tidak cukup untuk menilai.' };
-  else if (haram.length) decision = { kind: 'haram', word: 'HARAM', lead: 'Ditemukan bahan yang merujuk pada babi atau alkohol.' };
-  else if (syubhat.length) decision = { kind: 'syubhat', word: 'SYUBHAT', lead: 'Ada bahan meragukan (sumber tidak jelas). Lebih aman dihindari sampai ada kepastian.' };
-  else if (hasCert) decision = { kind: 'halal', word: 'HALAL', lead: 'Ada indikasi sertifikasi halal dan tidak ditemukan bahan haram/syubhat pada teks yang tersedia.' };
-  else decision = { kind: 'syubhat', word: 'SYUBHAT', lead: 'Tidak ditemukan bahan haram yang cocok, tetapi tanpa sertifikasi resmi kami tidak menyatakan halal secara pasti.' };
+  const decision = decide(hits, hasCert, text);
 
   const hitHtml = hits.length
     ? `<ul class="ing-list">${hits.map((h) => `<li class="${h.verdict}"><strong>${escapeHtml(h.term)}</strong> — ${escapeHtml(h.label)} (${h.verdict})</li>`).join('')}</ul>`

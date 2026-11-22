@@ -223,6 +223,10 @@ function renderSettings() {
     <label class="setting-row">Kota cadangan
       <select class="select" id="city-sel">${cityOpts}</select>
     </label>
+    <div class="setting-row">
+      <div class="toggle-title">Halal Pro — minyak dan lemak</div>
+      <div class="muted">Minyak/lemak hewani (動物油脂, 牛脂, 魚油, tallow, dll.) selalu ditandai HARAM. Lemak babi tetap HARAM. Minyak/lemak nabati (植物油, パーム油, palm oil, dll.) tidak ditandai. Lemak susu (乳脂肪) tidak ditandai.</div>
+    </div>
     <p class="btn-row">
       <button type="button" class="btn" id="use-gps">Gunakan lokasi HP</button>
     </p>
@@ -272,7 +276,7 @@ function applyRoute() {
   if (name === 'murotal') renderMurotal();
   if (name === 'doa') renderDoa();
   if (name === 'qibla') renderQibla();
-  if (name === 'halal') renderHalal(r.rest[0] === 'contoh');
+  if (name === 'halal') renderHalal(r.rest[0] === 'contoh', r.rest[1] || '');
   if (name === 'azan') renderAzan();
   if (name === 'alarm') renderAlarm();
   if (name === 'settings') renderSettings();
