@@ -53,6 +53,8 @@ Arab, latin, dan terjemah Inggris diambil dari [hisnmuslim.com](https://www.hisn
 - OCR opsional: tesseract.js (jpn+eng) dimuat on-demand dari jsDelivr, tidak dibundle.
 - Pencari tempat: OpenStreetMap Overpass, tag `diet:halal` / `cuisine=halal`.
 - Hasil **bukan fatwa** dan tidak pernah dinyatakan pasti.
+- Preferensi pemilik: minyak/lemak **hewani** (動物油脂, 牛脂, 魚油, tallow, dll.) selalu ditandai **HARAM**. Lemak babi (ラード, 豚脂, lard, pork fat, ポークエキス) tetap HARAM. Minyak/lemak **nabati** (植物油, パーム油, palm oil, dll.) **tidak ditandai**. **乳脂肪** (lemak susu) tidak ditandai.
+- Produk dengan minyak/lemak hewani **tidak** boleh berstatus HALAL, meskipun ada label halal di Open Food Facts.
 
 ## Alarm (batas PWA)
 

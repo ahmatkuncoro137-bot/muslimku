@@ -1,4 +1,4 @@
-const CACHE = 'muslimku-v2';
+const CACHE = 'muslimku-v4';
 const PRECACHE = [
   "./",
   "./assets/art/mosque.svg",
