@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "fetched_at": "2026-11-22T19:22:31.630355+00:00",
+    "source": "equran.id API v2 — nama surat (Kemenag-style Indonesian metadata)",
+    "source_url": "https://equran.id/api/v2/surat"
+  },
+  "surahs": [
+    {
+      "number": 1,
+      "name_ar": "الفاتحة",
+      "name_latin": "Al-Fatihah",
+      "ayah_count": 7,
+      "revelation": "Mekah",
+      "meaning_id": "Pembukaan"
+    },
+    {
+      "number": 2,
+      "name_ar": "البقرة",
+      "name_latin": "Al-Baqarah",
+      "ayah_count": 286,
+      "revelation": "Madinah",
+      "meaning_id": "Sapi"
+    },
+    {
+      "number": 3,
+      "name_ar": "اٰل عمران",
+      "name_latin": "Ali 'Imran",
+      "ayah_count": 200,
+      "revelation": "Madinah",
+      "meaning_id": "Keluarga Imran"
+    },
+    {
+      "number": 4,
+      "name_ar": "النساۤء",
+      "name_latin": "An-Nisa'",
+      "ayah_count": 176,
+      "revelation": "Madinah",
+      "meaning_id": "Wanita"
+    },
+    {
+      "number": 5,
+      "name_ar": "الماۤئدة",
+      "name_latin": "Al-Ma'idah",
+      "ayah_count": 120,
+      "revelation": "Madinah",
+      "meaning_id": "Hidangan"
+    },
+    {
+      "number": 6,
+      "name_ar": "الانعام",
+      "name_latin": "Al-An'am",
+      "ayah_count": 165,
+      "revelation": "Mekah",
+      "meaning_id": "Binatang Ternak"
+    },
+    {
+      "number": 7,
+      "name_ar": "الاعراف",
+      "name_latin": "Al-A'raf",
+      "ayah_count": 206,
+      "revelation": "Mekah",
+      "meaning_id": "Tempat Tertinggi"
+    },
+    {
+      "number": 8,
+      "name_ar": "الانفال",
+      "name_latin": "Al-Anfal",
+      "ayah_count": 75,
+      "revelation": "Madinah",
+      "meaning_id": "Rampasan Perang"
+    },
+    {
+      "number": 9,
+      "name_ar": "التوبة",
+      "name_latin": "At-Taubah",
+      "ayah_count": 129,
+      "revelation": "Madinah",
+      "meaning_id": "Pengampunan"
+    },
+    {
+      "number": 10,
+      "name_ar": "يونس",
+      "name_latin": "Yunus",
+      "ayah_count": 109,
+      "revelation": "Mekah",
+      "meaning_id": "Yunus"
+    },
+    {
+      "number": 11,
+      "name_ar": "هود",
+      "name_latin": "Hud",
+      "ayah_count": 123,
+      "revelation": "Mekah",
+      "meaning_id": "Hud"
+    },
+    {
+      "number": 12,
+      "name_ar": "يوسف",
+      "name_latin": "Yusuf",
+      "ayah_count": 111,
+      "revelation": "Mekah",
+      "meaning_id": "Yusuf"
+    },
+    {
+      "number": 13,
+      "name_ar": "الرّعد",
+      "name_latin": "Ar-Ra'd",
+      "ayah_count": 43,
+      "revelation": "Madinah",
+      "meaning_id": "Guruh"
+    },
+    {
+      "number": 14,
+      "name_ar": "ابرٰهيم",
+      "name_latin": "Ibrahim",
+      "ayah_count": 52,
+      "revelation": "Mekah",
+      "meaning_id": "Ibrahim"
+    },
+    {
+      "number": 15,
+      "name_ar": "الحجر",
+      "name_latin": "Al-Hijr",
+      "ayah_count": 99,
+      "revelation": "Mekah",
+      "meaning_id": "Hijr"
+    },
+    {
+      "number": 16,
+      "name_ar": "النحل",
+      "name_latin": "An-Nahl",
+      "ayah_count": 128,
+      "revelation": "Mekah",
+      "meaning_id": "Lebah"
+    },
+    {
+      "number": 17,
+      "name_ar": "الاسراۤء",
+      "name_latin": "Al-Isra'",
+      "ayah_count": 111,
+      "revelation": "Mekah",
+      "meaning_id": "Memperjalankan Malam Hari"
+    },
+    {
+      "number": 18,
+      "name_ar": "الكهف",
+      "name_latin": "Al-Kahf",
+      "ayah_count": 110,
+      "revelation": "Mekah",
+      "meaning_id": "Goa"
+    },
+    {
+      "number": 19,
+      "name_ar": "مريم",
+      "name_latin": "Maryam",
+      "ayah_count": 98,
+      "revelation": "Mekah",
+      "meaning_id": "Maryam"
+    },
+    {
+      "number": 20,
+      "name_ar": "طٰهٰ",
+      "name_latin": "Taha",
+      "ayah_count": 135,
+      "revelation": "Mekah",
+      "meaning_id": "Taha"
+    },
+    {
+      "number": 21,
+      "name_ar": "الانبياۤء",
+      "name_latin": "Al-Anbiya'",
+      "ayah_count": 112,
+      "revelation": "Mekah",
+      "meaning_id": "Para Nabi"
+    },
+    {
+      "number": 22,
+      "name_ar": "الحج",
+      "name_latin": "Al-Hajj",
+      "ayah_count": 78,
+      "revelation": "Madinah",
+      "meaning_id": "Haji"
+    },
+    {
+      "number": 23,
+      "name_ar": "المؤمنون",
+      "name_latin": "Al-Mu'minun",
+      "ayah_count": 118,
+      "revelation": "Mekah",
+      "meaning_id": "Orang-Orang Mukmin"
+    },
+    {
+      "number": 24,
+      "name_ar": "النّور",
+      "name_latin": "An-Nur",
+      "ayah_count": 64,
+      "revelation": "Madinah",
+      "meaning_id": "Cahaya"
+    },
+    {
+      "number": 25,
+      "name_ar": "الفرقان",
+      "name_latin": "Al-Furqan",
+      "ayah_count": 77,
+      "revelation": "Mekah",
+      "meaning_id": "Pembeda"
+    },
+    {
+      "number": 26,
+      "name_ar": "الشعراۤء",
+      "name_latin": "Asy-Syu'ara'",
+      "ayah_count": 227,
+      "revelation": "Mekah",
+      "meaning_id": "Para Penyair"
+    },
+    {
+      "number": 27,
+      "name_ar": "النمل",
+      "name_latin": "An-Naml",
+      "ayah_count": 93,
+      "revelation": "Mekah",
+      "meaning_id": "Semut-semut"
+    },
+    {
+      "number": 28,
+      "name_ar": "القصص",
+      "name_latin": "Al-Qasas",
+      "ayah_count": 88,
+      "revelation": "Mekah",
+      "meaning_id": "Kisah-Kisah"
+    },
+    {
+      "number": 29,
+      "name_ar": "العنكبوت",
+      "name_latin": "Al-'Ankabut",
+      "ayah_count": 69,
+      "revelation": "Mekah",
+      "meaning_id": "Laba-Laba"
+    },
+    {
+      "number": 30,
+      "name_ar": "الرّوم",
+      "name_latin": "Ar-Rum",
+      "ayah_count": 60,
+      "revelation": "Mekah",
+      "meaning_id": "Romawi"
+    },
+    {
+      "number": 31,
+      "name_ar": "لقمٰن",
+      "name_latin": "Luqman",
+      "ayah_count": 34,
+      "revelation": "Mekah",
+      "meaning_id": "Luqman"
+    },
+    {
+      "number": 32,
+      "name_ar": "السّجدة",
+      "name_latin": "As-Sajdah",
+      "ayah_count": 30,
+      "revelation": "Mekah",
+      "meaning_id": "Sajdah"
+    },
+    {
+      "number": 33,
+      "name_ar": "الاحزاب",
+      "name_latin": "Al-Ahzab",
+      "ayah_count": 73,
+      "revelation": "Madinah",
+      "meaning_id": "Golongan Yang Bersekutu"
+    },
+    {
+      "number": 34,
+      "name_ar": "سبأ",
+      "name_latin": "Saba'",
+      "ayah_count": 54,
+      "revelation": "Mekah",
+      "meaning_id": "Saba'"
+    },
+    {
+      "number": 35,
+      "name_ar": "فاطر",
+      "name_latin": "Fatir",
+      "ayah_count": 45,
+      "revelation": "Mekah",
+      "meaning_id": "Maha Pencipta"
+    },
+    {
+      "number": 36,
+      "name_ar": "يٰسۤ",
+      "name_latin": "Yasin",
+      "ayah_count": 83,
+      "revelation": "Mekah",
+      "meaning_id": "Yasin"
+    },
+    {
+      "number": 37,
+      "name_ar": "الصّٰۤفّٰت",
+      "name_latin": "As-Saffat",
+      "ayah_count": 182,
+      "revelation": "Mekah",
+      "meaning_id": "Barisan-Barisan"
+    },
+    {
+      "number": 38,
+      "name_ar": "ص",
+      "name_latin": "Sad",
+      "ayah_count": 88,
+      "revelation": "Mekah",
+      "meaning_id": "Sad"
+    },
+    {
+      "number": 39,
+      "name_ar": "الزمر",
+      "name_latin": "Az-Zumar",
+      "ayah_count": 75,
+      "revelation": "Mekah",
+      "meaning_id": "Rombongan"
+    },
+    {
+      "number": 40,
+      "name_ar": "غافر",
+      "name_latin": "Ghafir",
+      "ayah_count": 85,
+      "revelation": "Mekah",
+      "meaning_id": "Maha Pengampun"
+    },
+    {
+      "number": 41,
+      "name_ar": "فصّلت",
+      "name_latin": "Fussilat",
+      "ayah_count": 54,
+      "revelation": "Mekah",
+      "meaning_id": "Yang Dijelaskan"
+    },
+    {
+      "number": 42,
+      "name_ar": "الشورى",
+      "name_latin": "Asy-Syura",
+      "ayah_count": 53,
+      "revelation": "Mekah",
+      "meaning_id": "Musyawarah"
+    },
+    {
+      "number": 43,
+      "name_ar": "الزخرف",
+      "name_latin": "Az-Zukhruf",
+      "ayah_count": 89,
+      "revelation": "Mekah",
+      "meaning_id": "Perhiasan"
+    },
+    {
+      "number": 44,
+      "name_ar": "الدخان",
+      "name_latin": "Ad-Dukhan",
+      "ayah_count": 59,
+      "revelation": "Mekah",
+      "meaning_id": "Kabut"
+    },
+    {
+      "number": 45,
+      "name_ar": "الجاثية",
+      "name_latin": "Al-Jasiyah",
+      "ayah_count": 37,
+      "revelation": "Mekah",
+      "meaning_id": "Berlutut"
+    },
+    {
+      "number": 46,
+      "name_ar": "الاحقاف",
+      "name_latin": "Al-Ahqaf",
+      "ayah_count": 35,
+      "revelation": "Mekah",
+      "meaning_id": "Bukit Pasir"
+    },
+    {
+      "number": 47,
+      "name_ar": "محمّد",
+      "name_latin": "Muhammad",
+      "ayah_count": 38,
+      "revelation": "Madinah",
+      "meaning_id": "Muhammad"
+    },
+    {
+      "number": 48,
+      "name_ar": "الفتح",
+      "name_latin": "Al-Fath",
+      "ayah_count": 29,
+      "revelation": "Madinah",
+      "meaning_id": "Kemenangan"
+    },
+    {
+      "number": 49,
+      "name_ar": "الحجرٰت",
+      "name_latin": "Al-Hujurat",
+      "ayah_count": 18,
+      "revelation": "Madinah",
+      "meaning_id": "Kamar-Kamar"
+    },
+    {
+      "number": 50,
+      "name_ar": "ق",
+      "name_latin": "Qaf",
+      "ayah_count": 45,
+      "revelation": "Mekah",
+      "meaning_id": "Qaf"
+    },
+    {
+      "number": 51,
+      "name_ar": "الذّٰريٰت",
+      "name_latin": "Az-Zariyat",
+      "ayah_count": 60,
+      "revelation": "Mekah",
+      "meaning_id": "Angin yang Menerbangkan"
+    },
+    {
+      "number": 52,
+      "name_ar": "الطور",
+      "name_latin": "At-Tur",
+      "ayah_count": 49,
+      "revelation": "Mekah",
+      "meaning_id": "Bukit Tursina"
+    },
+    {
+      "number": 53,
+      "name_ar": "النجم",
+      "name_latin": "An-Najm",
+      "ayah_count": 62,
+      "revelation": "Mekah",
+      "meaning_id": "Bintang"
+    },
+    {
+      "number": 54,
+      "name_ar": "القمر",
+      "name_latin": "Al-Qamar",
+      "ayah_count": 55,
+      "revelation": "Mekah",
+      "meaning_id": "Bulan"
+    },
+    {
+      "number": 55,
+      "name_ar": "الرحمن",
+      "name_latin": "Ar-Rahman",
+      "ayah_count": 78,
+      "revelation": "Madinah",
+      "meaning_id": "Maha Pengasih"
+    },
+    {
+      "number": 56,
+      "name_ar": "الواقعة",
+      "name_latin": "Al-Waqi'ah",
+      "ayah_count": 96,
+      "revelation": "Mekah",
+      "meaning_id": "Hari Kiamat"
+    },
+    {
+      "number": 57,
+      "name_ar": "الحديد",
+      "name_latin": "Al-Hadid",
+      "ayah_count": 29,
+      "revelation": "Madinah",
+      "meaning_id": "Besi"
+    },
+    {
+      "number": 58,
+      "name_ar": "المجادلة",
+      "name_latin": "Al-Mujadilah",
+      "ayah_count": 22,
+      "revelation": "Madinah",
+      "meaning_id": "Gugatan"
+    },
+    {
+      "number": 59,
+      "name_ar": "الحشر",
+      "name_latin": "Al-Hasyr",
+      "ayah_count": 24,
+      "revelation": "Madinah",
+      "meaning_id": "Pengusiran"
+    },
+    {
+      "number": 60,
+      "name_ar": "الممتحنة",
+      "name_latin": "Al-Mumtahanah",
+      "ayah_count": 13,
+      "revelation": "Madinah",
+      "meaning_id": "Wanita Yang Diuji"
+    },
+    {
+      "number": 61,
+      "name_ar": "الصّفّ",
+      "name_latin": "As-Saff",
+      "ayah_count": 14,
+      "revelation": "Madinah",
+      "meaning_id": "Barisan"
+    },
+    {
+      "number": 62,
+      "name_ar": "الجمعة",
+      "name_latin": "Al-Jumu'ah",
+      "ayah_count": 11,
+      "revelation": "Madinah",
+      "meaning_id": "Jumat"
+    },
+    {
+      "number": 63,
+      "name_ar": "المنٰفقون",
+      "name_latin": "Al-Munafiqun",
+      "ayah_count": 11,
+      "revelation": "Madinah",
+      "meaning_id": "Orang-Orang Munafik"
+    },
+    {
+      "number": 64,
+      "name_ar": "التغابن",
+      "name_latin": "At-Tagabun",
+      "ayah_count": 18,
+      "revelation": "Madinah",
+      "meaning_id": "Pengungkapan Kesalahan"
+    },
+    {
+      "number": 65,
+      "name_ar": "الطلاق",
+      "name_latin": "At-Talaq",
+      "ayah_count": 12,
+      "revelation": "Madinah",
+      "meaning_id": "Talak"
+    },
+    {
+      "number": 66,
+      "name_ar": "التحريم",
+      "name_latin": "At-Tahrim",
+      "ayah_count": 12,
+      "revelation": "Madinah",
+      "meaning_id": "Pengharaman"
+    },
+    {
+      "number": 67,
+      "name_ar": "الملك",
+      "name_latin": "Al-Mulk",
+      "ayah_count": 30,
+      "revelation": "Mekah",
+      "meaning_id": "Kerajaan"
+    },
+    {
+      "number": 68,
+      "name_ar": "القلم",
+      "name_latin": "Al-Qalam",
+      "ayah_count": 52,
+      "revelation": "Mekah",
+      "meaning_id": "Pena"
+    },
+    {
+      "number": 69,
+      "name_ar": "الحاۤقّة",
+      "name_latin": "Al-Haqqah",
+      "ayah_count": 52,
+      "revelation": "Mekah",
+      "meaning_id": "Hari Kiamat"
+    },
+    {
+      "number": 70,
+      "name_ar": "المعارج",
+      "name_latin": "Al-Ma'arij",
+      "ayah_count": 44,
+      "revelation": "Mekah",
+      "meaning_id": "Tempat Naik"
+    },
+    {
+      "number": 71,
+      "name_ar": "نوح",
+      "name_latin": "Nuh",
+      "ayah_count": 28,
+      "revelation": "Mekah",
+      "meaning_id": "Nuh"
+    },
+    {
+      "number": 72,
+      "name_ar": "الجن",
+      "name_latin": "Al-Jinn",
+      "ayah_count": 28,
+      "revelation": "Mekah",
+      "meaning_id": "Jin"
+    },
+    {
+      "number": 73,
+      "name_ar": "المزّمّل",
+      "name_latin": "Al-Muzzammil",
+      "ayah_count": 20,
+      "revelation": "Mekah",
+      "meaning_id": "Orang Yang Berselimut"
+    },
+    {
+      "number": 74,
+      "name_ar": "المدّثّر",
+      "name_latin": "Al-Muddassir",
+      "ayah_count": 56,
+      "revelation": "Mekah",
+      "meaning_id": "Orang Yang Berkemul"
+    },
+    {
+      "number": 75,
+      "name_ar": "القيٰمة",
+      "name_latin": "Al-Qiyamah",
+      "ayah_count": 40,
+      "revelation": "Mekah",
+      "meaning_id": "Hari Kiamat"
+    },
+    {
+      "number": 76,
+      "name_ar": "الانسان",
+      "name_latin": "Al-Insan",
+      "ayah_count": 31,
+      "revelation": "Madinah",
+      "meaning_id": "Manusia"
+    },
+    {
+      "number": 77,
+      "name_ar": "المرسلٰت",
+      "name_latin": "Al-Mursalat",
+      "ayah_count": 50,
+      "revelation": "Mekah",
+      "meaning_id": "Malaikat Yang Diutus"
+    },
+    {
+      "number": 78,
+      "name_ar": "النبأ",
+      "name_latin": "An-Naba'",
+      "ayah_count": 40,
+      "revelation": "Mekah",
+      "meaning_id": "Berita Besar"
+    },
+    {
+      "number": 79,
+      "name_ar": "النّٰزعٰت",
+      "name_latin": "An-Nazi'at",
+      "ayah_count": 46,
+      "revelation": "Mekah",
+      "meaning_id": "Malaikat Yang Mencabut"
+    },
+    {
+      "number": 80,
+      "name_ar": "عبس",
+      "name_latin": "'Abasa",
+      "ayah_count": 42,
+      "revelation": "Mekah",
+      "meaning_id": "Bermuka Masam"
+    },
+    {
+      "number": 81,
+      "name_ar": "التكوير",
+      "name_latin": "At-Takwir",
+      "ayah_count": 29,
+      "revelation": "Mekah",
+      "meaning_id": "Penggulungan"
+    },
+    {
+      "number": 82,
+      "name_ar": "الانفطار",
+      "name_latin": "Al-Infitar",
+      "ayah_count": 19,
+      "revelation": "Mekah",
+      "meaning_id": "Terbelah"
+    },
+    {
+      "number": 83,
+      "name_ar": "المطفّفين",
+      "name_latin": "Al-Mutaffifin",
+      "ayah_count": 36,
+      "revelation": "Mekah",
+      "meaning_id": "Orang-Orang Curang"
+    },
+    {
+      "number": 84,
+      "name_ar": "الانشقاق",
+      "name_latin": "Al-Insyiqaq",
+      "ayah_count": 25,
+      "revelation": "Mekah",
+      "meaning_id": "Terbelah"
+    },
+    {
+      "number": 85,
+      "name_ar": "البروج",
+      "name_latin": "Al-Buruj",
+      "ayah_count": 22,
+      "revelation": "Mekah",
+      "meaning_id": "Gugusan Bintang"
+    },
+    {
+      "number": 86,
+      "name_ar": "الطارق",
+      "name_latin": "At-Tariq",
+      "ayah_count": 17,
+      "revelation": "Mekah",
+      "meaning_id": "Yang Datang Di Malam Hari"
+    },
+    {
+      "number": 87,
+      "name_ar": "الاعلى",
+      "name_latin": "Al-A'la",
+      "ayah_count": 19,
+      "revelation": "Mekah",
+      "meaning_id": "Maha Tinggi"
+    },
+    {
+      "number": 88,
+      "name_ar": "الغاشية",
+      "name_latin": "Al-Gasyiyah",
+      "ayah_count": 26,
+      "revelation": "Mekah",
+      "meaning_id": "Hari Kiamat"
+    },
+    {
+      "number": 89,
+      "name_ar": "الفجر",
+      "name_latin": "Al-Fajr",
+      "ayah_count": 30,
+      "revelation": "Mekah",
+      "meaning_id": "Fajar"
+    },
+    {
+      "number": 90,
+      "name_ar": "البلد",
+      "name_latin": "Al-Balad",
+      "ayah_count": 20,
+      "revelation": "Mekah",
+      "meaning_id": "Negeri"
+    },
+    {
+      "number": 91,
+      "name_ar": "الشمس",
+      "name_latin": "Asy-Syams",
+      "ayah_count": 15,
+      "revelation": "Mekah",
+      "meaning_id": "Matahari"
+    },
+    {
+      "number": 92,
+      "name_ar": "الّيل",
+      "name_latin": "Al-Lail",
+      "ayah_count": 21,
+      "revelation": "Mekah",
+      "meaning_id": "Malam"
+    },
+    {
+      "number": 93,
+      "name_ar": "الضحى",
+      "name_latin": "Ad-Duha",
+      "ayah_count": 11,
+      "revelation": "Mekah",
+      "meaning_id": "Duha"
+    },
+    {
+      "number": 94,
+      "name_ar": "الشرح",
+      "name_latin": "Al-Insyirah",
+      "ayah_count": 8,
+      "revelation": "Mekah",
+      "meaning_id": "Lapang"
+    },
+    {
+      "number": 95,
+      "name_ar": "التين",
+      "name_latin": "At-Tin",
+      "ayah_count": 8,
+      "revelation": "Mekah",
+      "meaning_id": "Buah Tin"
+    },
+    {
+      "number": 96,
+      "name_ar": "العلق",
+      "name_latin": "Al-'Alaq",
+      "ayah_count": 19,
+      "revelation": "Mekah",
+      "meaning_id": "Segumpal Darah"
+    },
+    {
+      "number": 97,
+      "name_ar": "القدر",
+      "name_latin": "Al-Qadr",
+      "ayah_count": 5,
+      "revelation": "Mekah",
+      "meaning_id": "Kemuliaan"
+    },
+    {
+      "number": 98,
+      "name_ar": "البيّنة",
+      "name_latin": "Al-Bayyinah",
+      "ayah_count": 8,
+      "revelation": "Madinah",
+      "meaning_id": "Bukti Nyata"
+    },
+    {
+      "number": 99,
+      "name_ar": "الزلزلة",
+      "name_latin": "Az-Zalzalah",
+      "ayah_count": 8,
+      "revelation": "Madinah",
+      "meaning_id": "Guncangan"
+    },
+    {
+      "number": 100,
+      "name_ar": "العٰديٰت",
+      "name_latin": "Al-'Adiyat",
+      "ayah_count": 11,
+      "revelation": "Mekah",
+      "meaning_id": "Kuda Yang Berlari Kencang"
+    },
+    {
+      "number": 101,
+      "name_ar": "القارعة",
+      "name_latin": "Al-Qari'ah",
+      "ayah_count": 11,
+      "revelation": "Mekah",
+      "meaning_id": "Hari Kiamat"
+    },
+    {
+      "number": 102,
+      "name_ar": "التكاثر",
+      "name_latin": "At-Takasur",
+      "ayah_count": 8,
+      "revelation": "Mekah",
+      "meaning_id": "Bermegah-Megahan"
+    },
+    {
+      "number": 103,
+      "name_ar": "العصر",
+      "name_latin": "Al-'Asr",
+      "ayah_count": 3,
+      "revelation": "Mekah",
+      "meaning_id": "Masa"
+    },
+    {
+      "number": 104,
+      "name_ar": "الهمزة",
+      "name_latin": "Al-Humazah",
+      "ayah_count": 9,
+      "revelation": "Mekah",
+      "meaning_id": "Pengumpat"
+    },
+    {
+      "number": 105,
+      "name_ar": "الفيل",
+      "name_latin": "Al-Fil",
+      "ayah_count": 5,
+      "revelation": "Mekah",
+      "meaning_id": "Gajah"
+    },
+    {
+      "number": 106,
+      "name_ar": "قريش",
+      "name_latin": "Quraisy",
+      "ayah_count": 4,
+      "revelation": "Mekah",
+      "meaning_id": "Quraisy"
+    },
+    {
+      "number": 107,
+      "name_ar": "الماعون",
+      "name_latin": "Al-Ma'un",
+      "ayah_count": 7,
+      "revelation": "Mekah",
+      "meaning_id": "Barang Yang Berguna"
+    },
+    {
+      "number": 108,
+      "name_ar": "الكوثر",
+      "name_latin": "Al-Kausar",
+      "ayah_count": 3,
+      "revelation": "Mekah",
+      "meaning_id": "Pemberian Yang Banyak"
+    },
+    {
+      "number": 109,
+      "name_ar": "الكٰفرون",
+      "name_latin": "Al-Kafirun",
+      "ayah_count": 6,
+      "revelation": "Mekah",
+      "meaning_id": "Orang-Orang kafir"
+    },
+    {
+      "number": 110,
+      "name_ar": "النصر",
+      "name_latin": "An-Nasr",
+      "ayah_count": 3,
+      "revelation": "Madinah",
+      "meaning_id": "Pertolongan"
+    },
+    {
+      "number": 111,
+      "name_ar": "اللهب",
+      "name_latin": "Al-Lahab",
+      "ayah_count": 5,
+      "revelation": "Mekah",
+      "meaning_id": "Api Yang Bergejolak"
+    },
+    {
+      "number": 112,
+      "name_ar": "الاخلاص",
+      "name_latin": "Al-Ikhlas",
+      "ayah_count": 4,
+      "revelation": "Mekah",
+      "meaning_id": "Ikhlas"
+    },
+    {
+      "number": 113,
+      "name_ar": "الفلق",
+      "name_latin": "Al-Falaq",
+      "ayah_count": 5,
+      "revelation": "Madinah",
+      "meaning_id": "Subuh"
+    },
+    {
+      "number": 114,
+      "name_ar": "الناس",
+      "name_latin": "An-Nas",
+      "ayah_count": 6,
+      "revelation": "Madinah",
+      "meaning_id": "Manusia"
+    }
+  ]
+}

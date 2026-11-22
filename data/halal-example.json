@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "note": "Contoh produk nyata dari Open Food Facts, dipakai hanya sebagai demonstrasi (bukan pindai hidup). Foto disalin ke assets/examples/."
+  },
+  "products": [
+    {
+      "code": "0054028367911",
+      "name": "Probiotic Drink",
+      "brands": "Yakult",
+      "image": "assets/examples/yakult-front.jpg",
+      "image_source": "https://images.openfoodfacts.org/images/products/005/402/836/7911/front_en.59.400.jpg",
+      "source": "Open Food Facts · kode 0054028367911",
+      "labels": "en:halal",
+      "ingredients_text": "Water, Sugar, Skim Milk Powder, Glucose, Flavors, Live Lactobacillus casei strain Shirota"
+    },
+    {
+      "code": "4800016552113",
+      "name": "NC Seafood 40g",
+      "brands": "Nissin",
+      "image": "assets/examples/nissin-front.jpg",
+      "image_source": "https://images.openfoodfacts.org/images/products/480/001/655/2113/front_en.52.400.jpg",
+      "source": "Open Food Facts · kode 4800016552113",
+      "labels": "en:halal",
+      "ingredients_text": "Wheat Flour, Palm Oil, Iodized Salt, Tapioca Starch, Creamer (Glucose, Palm Fat, Sodium Caseinate), Dehydrated Vegetables (Cabbage, Spring Onion, Corn), Dehydrated Egg, Dehydrated Seafood Bits (Imitation Crab, Cuttlefish)"
+    }
+  ]
+}

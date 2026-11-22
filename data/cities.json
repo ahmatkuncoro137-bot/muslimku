@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "note": "Koordinat kota untuk cadangan jika GPS tidak tersedia. Zona waktu IANA dipakai saat menampilkan jam shalat."
+  },
+  "default_id": "tokyo",
+  "cities": [
+    {"id": "tokyo", "name": "Tokyo", "name_id": "Tokyo", "country": "Jepang", "lat": 35.6762, "lon": 139.6503, "tz": "Asia/Tokyo"},
+    {"id": "yokohama", "name": "Yokohama", "name_id": "Yokohama", "country": "Jepang", "lat": 35.4437, "lon": 139.6380, "tz": "Asia/Tokyo"},
+    {"id": "osaka", "name": "Osaka", "name_id": "Osaka", "country": "Jepang", "lat": 34.6937, "lon": 135.5023, "tz": "Asia/Tokyo"},
+    {"id": "kyoto", "name": "Kyoto", "name_id": "Kyoto", "country": "Jepang", "lat": 35.0116, "lon": 135.7681, "tz": "Asia/Tokyo"},
+    {"id": "nagoya", "name": "Nagoya", "name_id": "Nagoya", "country": "Jepang", "lat": 35.1815, "lon": 136.9066, "tz": "Asia/Tokyo"},
+    {"id": "sapporo", "name": "Sapporo", "name_id": "Sapporo", "country": "Jepang", "lat": 43.0618, "lon": 141.3545, "tz": "Asia/Tokyo"},
+    {"id": "fukuoka", "name": "Fukuoka", "name_id": "Fukuoka", "country": "Jepang", "lat": 33.5904, "lon": 130.4017, "tz": "Asia/Tokyo"},
+    {"id": "kobe", "name": "Kobe", "name_id": "Kobe", "country": "Jepang", "lat": 34.6901, "lon": 135.1956, "tz": "Asia/Tokyo"},
+    {"id": "kawasaki", "name": "Kawasaki", "name_id": "Kawasaki", "country": "Jepang", "lat": 35.5308, "lon": 139.7029, "tz": "Asia/Tokyo"},
+    {"id": "saitama", "name": "Saitama", "name_id": "Saitama", "country": "Jepang", "lat": 35.8616, "lon": 139.6455, "tz": "Asia/Tokyo"},
+    {"id": "hiroshima", "name": "Hiroshima", "name_id": "Hiroshima", "country": "Jepang", "lat": 34.3853, "lon": 132.4553, "tz": "Asia/Tokyo"},
+    {"id": "sendai", "name": "Sendai", "name_id": "Sendai", "country": "Jepang", "lat": 38.2682, "lon": 140.8694, "tz": "Asia/Tokyo"},
+    {"id": "chiba", "name": "Chiba", "name_id": "Chiba", "country": "Jepang", "lat": 35.6074, "lon": 140.1065, "tz": "Asia/Tokyo"},
+    {"id": "kitakyushu", "name": "Kitakyushu", "name_id": "Kitakyushu", "country": "Jepang", "lat": 33.8834, "lon": 130.8752, "tz": "Asia/Tokyo"},
+    {"id": "sakai", "name": "Sakai", "name_id": "Sakai", "country": "Jepang", "lat": 34.5733, "lon": 135.4831, "tz": "Asia/Tokyo"},
+    {"id": "niigata", "name": "Niigata", "name_id": "Niigata", "country": "Jepang", "lat": 37.9161, "lon": 139.0364, "tz": "Asia/Tokyo"},
+    {"id": "hamamatsu", "name": "Hamamatsu", "name_id": "Hamamatsu", "country": "Jepang", "lat": 34.7108, "lon": 137.7261, "tz": "Asia/Tokyo"},
+    {"id": "kumamoto", "name": "Kumamoto", "name_id": "Kumamoto", "country": "Jepang", "lat": 32.8031, "lon": 130.7079, "tz": "Asia/Tokyo"},
+    {"id": "sagamihara", "name": "Sagamihara", "name_id": "Sagamihara", "country": "Jepang", "lat": 35.5714, "lon": 139.3732, "tz": "Asia/Tokyo"},
+    {"id": "okayama", "name": "Okayama", "name_id": "Okayama", "country": "Jepang", "lat": 34.6551, "lon": 133.9195, "tz": "Asia/Tokyo"},
+    {"id": "shizuoka", "name": "Shizuoka", "name_id": "Shizuoka", "country": "Jepang", "lat": 34.9756, "lon": 138.3828, "tz": "Asia/Tokyo"},
+    {"id": "naha", "name": "Naha", "name_id": "Naha (Okinawa)", "country": "Jepang", "lat": 26.2124, "lon": 127.6792, "tz": "Asia/Tokyo"},
+    {"id": "kanazawa", "name": "Kanazawa", "name_id": "Kanazawa", "country": "Jepang", "lat": 36.5613, "lon": 136.6562, "tz": "Asia/Tokyo"},
+    {"id": "kagoshima", "name": "Kagoshima", "name_id": "Kagoshima", "country": "Jepang", "lat": 31.5969, "lon": 130.5571, "tz": "Asia/Tokyo"},
+    {"id": "utsunomiya", "name": "Utsunomiya", "name_id": "Utsunomiya", "country": "Jepang", "lat": 36.5551, "lon": 139.8828, "tz": "Asia/Tokyo"},
+    {"id": "matsuyama", "name": "Matsuyama", "name_id": "Matsuyama", "country": "Jepang", "lat": 33.8392, "lon": 132.7657, "tz": "Asia/Tokyo"},
+    {"id": "sukoharjo", "name": "Sukoharjo", "name_id": "Sukoharjo", "country": "Indonesia", "lat": -7.6833, "lon": 110.8333, "tz": "Asia/Jakarta"},
+    {"id": "surakarta", "name": "Surakarta", "name_id": "Surakarta (Solo)", "country": "Indonesia", "lat": -7.5755, "lon": 110.8243, "tz": "Asia/Jakarta"},
+    {"id": "yogyakarta", "name": "Yogyakarta", "name_id": "Yogyakarta", "country": "Indonesia", "lat": -7.7956, "lon": 110.3695, "tz": "Asia/Jakarta"},
+    {"id": "jakarta", "name": "Jakarta", "name_id": "Jakarta", "country": "Indonesia", "lat": -6.2088, "lon": 106.8456, "tz": "Asia/Jakarta"},
+    {"id": "makkah", "name": "Makkah", "name_id": "Makkah", "country": "Arab Saudi", "lat": 21.4225, "lon": 39.8262, "tz": "Asia/Riyadh"}
+  ]
+}

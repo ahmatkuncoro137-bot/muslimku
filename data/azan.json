@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "note": "Berkas azan diunduh dari Wikimedia Commons dan disimpan lokal agar alarm tetap bunyi tanpa internet. Kredit dan lisensi wajib ditampilkan."
+  },
+  "voices": [
+    {
+      "id": "adam-synagda",
+      "name": "Adam Synagda",
+      "name_id": "Adam Synagda (nada tenang)",
+      "file": "assets/azan/azan-adam-synagda.mp3",
+      "source": "Wikimedia Commons — File:Beautiful adhan.ogg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beautiful_adhan.ogg",
+      "license": "CC0 1.0 Public Domain Dedication",
+      "author": "Adam-synagda"
+    },
+    {
+      "id": "andrewler",
+      "name": "Andrewler",
+      "name_id": "Andrewler (nada klasik)",
+      "file": "assets/azan/azan-andrewler.mp3",
+      "source": "Wikimedia Commons — File:Azan.ogg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Azan.ogg",
+      "license": "CC BY-SA 4.0",
+      "author": "Andrewler"
+    },
+    {
+      "id": "sabah-fakhry",
+      "name": "Sabah Fakhry",
+      "name_id": "Sabah Fakhry (nada Syam)",
+      "file": "assets/azan/azan-sabah-fakhry.mp3",
+      "source": "Wikimedia Commons — File:Call to prayer by Sabah Fakhry.mp3",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Call_to_prayer_by_Sabah_Fakhry.mp3",
+      "license": "Public domain",
+      "author": "Sabah Fakhri (1934–2021)"
+    },
+    {
+      "id": "aaqib-azeez",
+      "name": "Aaqib Azeez",
+      "name_id": "Aaqib Azeez (nada ringkas)",
+      "file": "assets/azan/azan-aaqib-azeez.mp3",
+      "source": "Wikimedia Commons — File:The Adhan - Muslim Call to Prayer - Aaqib Azeez.mp3",
+      "source_url": "https://commons.wikimedia.org/wiki/File:The_Adhan_-_Muslim_Call_to_Prayer_-_Aaqib_Azeez.mp3",
+      "license": "CC BY-SA 4.0",
+      "author": "Aaqib Azeez / Atcovi"
+    },
+    {
+      "id": "mahfoudou",
+      "name": "Mahfoudou",
+      "name_id": "Mahfoudou (nada panjang)",
+      "file": "assets/azan/azan-mahfoudou.mp3",
+      "source": "Wikimedia Commons — File:Islamic call to worship.oga",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Islamic_call_to_worship.oga",
+      "license": "CC BY-SA 4.0",
+      "author": "Mahfoudou"
+    }
+  ]
+}

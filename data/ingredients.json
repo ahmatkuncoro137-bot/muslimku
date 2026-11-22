@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "note": "Daftar kurasi untuk pemeriksaan label makanan di Jepang. Hasil hanya panduan, bukan fatwa, dan tidak pernah pasti. Istilah '酒' tidak dicocokkan di dalam '醤油'/'醬油'."
+  },
+  "halal_cert_tags": [
+    "en:halal",
+    "en:jakim",
+    "en:jakim-halal",
+    "en:mui",
+    "en:halal-mui",
+    "en:majlis-ulama-indonesia",
+    "en:muis",
+    "en:singapore-muis-halal",
+    "en:halal-food-council",
+    "en:ifanca",
+    "en:hfa",
+    "en:halal-certified"
+  ],
+  "halal_cert_terms": [
+    "halal", "ハルアル", "ハラール", "ハラル",
+    "jakim", "mui", "muis", "lppom", "ifanca",
+    "japan muslim association", "jma halal", "halal japan"
+  ],
+  "terms": [
+    {"id": "pork", "verdict": "haram", "label_id": "Babi / daging babi", "terms": ["pork", "pig", "porcine", "boar", "sow", "swine", "lard", "ham", "bacon", "pepperoni", "pancetta", "prosciutto", "chorizo", "salami", "mortadella", "sausage", "hot dog", "hotdog", "bratwurst", "gelatina de cerdo", "pork gelatin", "porcine gelatin"]},
+    {"id": "pork-ja", "verdict": "haram", "label_id": "Babi (istilah Jepang)", "terms": ["豚", "豚肉", "豚脂", "豚骨", "豚バラ", "豚ミンチ", "豚こつ", "ポーク", "ポークエキス", "ポークソーセージ", "ラード", "ベーコン", "ハム", "サラミ", "ペパロニ", "ペッパーoni", "ソーセージ", "チャーシュー", "焼豚", "豚骨スープ", "とんこつ", "トンコツ"]},
+    {"id": "alcohol", "verdict": "haram", "label_id": "Alkohol / minuman keras", "terms": ["wine", "beer", "brandy", "whisky", "whiskey", "bourbon", "rum", "vodka", "gin", "sake", "soju", "liqueur", "liqueur", "cooking wine", "shaoxing", "mirin", "ethyl alcohol", "ethanol", "alcool", "alcohol"]},
+    {"id": "alcohol-ja", "verdict": "haram", "label_id": "Alkohol (istilah Jepang)", "terms": ["日本酒", "清酒", "焼酎", "泡盛", "洋酒", "ワイン", "ビール", "麦酒", "ブランデー", "ウイスキー", "ウォッカ", "ジン", "ラム", "リキュール", "料理酒", "調理酒", "みりん", "味醂", "本みりん", "本味醂", "アルコール", "エタノール"]},
+    {"id": "mirin-style", "verdict": "syubhat", "label_id": "Mirin tiruan / mirin-fu (kadang tanpa alkohol)", "terms": ["みりん風", "味醂風", "発酵調味料"]},
+    {"id": "gelatin", "verdict": "syubhat", "label_id": "Gelatin (sumber sering tidak jelas, bisa dari babi)", "terms": ["gelatin", "gelatine", "gelatina", "ゼラチン", "ゼラチン（豚", "動物性ゼラチン"]},
+    {"id": "shortening", "verdict": "syubhat", "label_id": "Shortening (bisa nabati atau hewani)", "terms": ["shortening", "ショートニング", "動物性脂肪", "動物油脂", "牛脂", "羊脂"]},
+    {"id": "emulsifier", "verdict": "syubhat", "label_id": "Pengemulsi / 乳化剤 (sumber bisa hewani)", "terms": ["emulsifier", "emulsifying", "mono- and diglycerides", "monoglyceride", "diglyceride", "e471", "e472", "e473", "e474", "e475", "レシチン", "乳化剤"]},
+    {"id": "enzymes", "verdict": "syubhat", "label_id": "Enzim / pepsin / rennet (bisa dari babi atau anak sapi)", "terms": ["pepsin", "rennet", "rennin", "lipase", "pancreatin", "animal enzyme", "ペプシン", "レンネット", "レンニン", "リパーゼ", "パンクレアチン", "動物性酵素"]},
+    {"id": "carmine", "verdict": "syubhat", "label_id": "Karmia / pewarna serangga (ikhtilaf ulama)", "terms": ["carmine", "cochineal", "e120", "カーミン", "コチニール"]},
+    {"id": "unspecified-meat", "verdict": "syubhat", "label_id": "Ekstrak daging tidak jelas (proses sembelih tidak diketahui)", "terms": ["beef extract", "chicken extract", "meat extract", "beef flavor", "chicken flavor", "畜肉", "畜肉エキス", "ビーフエキス", "チキンエキス", "ポークエキス", "肉エキス", "動物性エキス"]},
+    {"id": "vanilla-extract", "verdict": "syubhat", "label_id": "Vanilla extract (sering berbahan alkohol)", "terms": ["vanilla extract", "バニラエキストラクト"]}
+  ],
+  "ignore_substrings": ["醤油", "醬油", "魚醤油", "たまり醤油"]
+}
