@@ -499,3 +499,20 @@ a { color: var(--green-700); }
 .hist-verdict.syubhat { color: var(--warn); }
 
 .hero-art { height: 120px; }
+
+.setting-row.toggle {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.setting-row.toggle .toggle-text { flex: 1; min-width: 200px; }
+.setting-row.toggle .toggle-title { font-weight: 700; }
+.setting-row.toggle input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--green-800);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
