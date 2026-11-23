@@ -32,6 +32,7 @@ export function renderAzan() {
       <label class="voice-item">
         <div>
           <div style="font-weight:800">${escapeHtml(v.name_id)}</div>
+          ${v.style ? `<div class="muted">${escapeHtml(v.style)}</div>` : ''}
           <div class="license">${escapeHtml(v.author)} · ${escapeHtml(v.license)}</div>
           <div class="license"><a href="${escapeHtml(v.source_url)}" target="_blank" rel="noopener">Sumber</a></div>
         </div>

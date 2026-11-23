@@ -25,7 +25,7 @@ export function defaultSettings() {
     cityId: 'tokyo',
     useGps: false,
     coords: { lat: 35.6762, lon: 139.6503, tz: 'Asia/Tokyo', label: 'Tokyo, Jepang', source: 'kota' },
-    azanId: 'adam-synagda',
+    azanId: 'makkah-haram',
     alarms: { imsak: false, fajr: true, sunrise: false, dhuhr: true, asr: true, maghrib: true, isha: true },
     imsakOffset: 10,
     earlyMinutes: 0,

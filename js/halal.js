@@ -37,11 +37,13 @@ export function renderHalal(prefillExample = false, exampleCode = '') {
     <div id="halal-result"></div>
     <div class="btn-row">
       <button type="button" class="btn" id="start-scan">Pindai kode batang</button>
-      <button type="button" class="btn secondary" id="stop-scan">Stop kamera</button>
+      <button type="button" class="btn secondary" id="photo-barcode">Foto kode batang</button>
+      <button type="button" class="btn ghost" id="stop-scan">Stop kamera</button>
+      <input type="file" id="barcode-file" accept="image/*" capture="environment" hidden>
     </div>
     <div id="reader" hidden></div>
     <div class="toolbar">
-      <input class="search" id="barcode-input" placeholder="Atau ketik kode batang (EAN/UPC)">
+      <input class="search" id="barcode-input" inputmode="numeric" autocomplete="off" placeholder="Atau ketik kode batang (EAN/UPC)">
       <button type="button" class="btn" id="lookup-btn">Cari produk</button>
     </div>
     <div class="toolbar">
@@ -65,7 +67,13 @@ export function renderHalal(prefillExample = false, exampleCode = '') {
   `;
   $('#start-scan', view).addEventListener('click', startScan);
   $('#stop-scan', view).addEventListener('click', stopScan);
-  $('#lookup-btn', view).addEventListener('click', () => lookupBarcode($('#barcode-input', view).value.trim()));
+  $('#photo-barcode', view).addEventListener('click', () => $('#barcode-file', view).click());
+  $('#barcode-file', view).addEventListener('change', (e) => {
+    const f = e.target.files && e.target.files[0];
+    e.target.value = '';
+    if (f) decodeBarcodePhoto(f);
+  });
+  $('#lookup-btn', view).addEventListener('click', () => lookupBarcode($('#barcode-input', view).value));
   $('#check-text', view).addEventListener('click', () => {
     const text = $('#ing-text', view).value;
     showVerdict({ source: 'Teks bahan yang Anda masukkan', name: 'Pemeriksaan teks label', text, example: false });
@@ -117,6 +125,94 @@ function showExample(code = '') {
   renderHistory();
 }
 
+function normalizeBarcode(raw) {
+  return String(raw || '').replace(/\D/g, '');
+}
+
+let zxingModPromise = null;
+async function loadZxing() {
+  if (!zxingModPromise) {
+    zxingModPromise = import('./vendor/zxing-wasm/es/reader/index.js').then((mod) => {
+      const wasmUrl = new URL('./vendor/zxing-wasm/reader/zxing_reader.wasm', import.meta.url).href;
+      mod.prepareZXingModule({
+        overrides: {
+          locateFile: (path) => (String(path).endsWith('.wasm') ? wasmUrl : path)
+        }
+      });
+      return mod;
+    });
+  }
+  return zxingModPromise;
+}
+
+async function decodeWithZxing(input) {
+  const mod = await loadZxing();
+  const results = await mod.readBarcodes(input, { tryHarder: true, tryRotate: true, tryInvert: true });
+  const hit = (results || []).find((r) => r && r.text && !r.error);
+  return hit ? normalizeBarcode(hit.text) : '';
+}
+
+async function decodeBarcodePhoto(file) {
+  toast('Membaca kode batang dari foto…');
+  try {
+    let code = '';
+    try { code = await decodeWithZxing(file); } catch { /* try other decoders */ }
+    if (!code && 'BarcodeDetector' in window) {
+      try {
+        const det = new BarcodeDetector({ formats: ['ean_13', 'ean_8', 'upc_a', 'upc_e', 'code_128'] });
+        const bmp = await createImageBitmap(file);
+        const codes = await det.detect(bmp);
+        if (codes && codes[0] && codes[0].rawValue) code = normalizeBarcode(codes[0].rawValue);
+      } catch { /* next */ }
+    }
+    if (!code && typeof Html5Qrcode !== 'undefined') {
+      const holder = document.createElement('div');
+      holder.id = 'h5-file-tmp';
+      holder.style.display = 'none';
+      document.body.appendChild(holder);
+      try {
+        const qr = new Html5Qrcode('h5-file-tmp');
+        const text = await qr.scanFile(file, false);
+        code = normalizeBarcode(text);
+      } catch { /* ignore */ }
+      holder.remove();
+    }
+    if (code) {
+      const input = document.getElementById('barcode-input');
+      if (input) input.value = code;
+      lookupBarcode(code);
+    } else {
+      toast('Kode batang tidak terbaca. Coba foto lebih dekat dan terang, atau ketik angkanya.');
+    }
+  } catch {
+    toast('Gagal membaca foto. Ketik kode batang, atau periksa dari teks bahan.');
+  }
+}
+
+async function decodeVideoFrame(video) {
+  if (!video || !video.videoWidth) return '';
+  const c = document.createElement('canvas');
+  c.width = video.videoWidth;
+  c.height = video.videoHeight;
+  const ctx = c.getContext('2d', { willReadFrequently: true });
+  ctx.drawImage(video, 0, 0);
+  try {
+    return await decodeWithZxing(ctx.getImageData(0, 0, c.width, c.height));
+  } catch {
+    return '';
+  }
+}
+
+function onBarcodeFound(raw) {
+  const code = normalizeBarcode(raw);
+  if (!code) return false;
+  const input = document.getElementById('barcode-input');
+  if (input) input.value = code;
+  stopScan();
+  lookupBarcode(code);
+  return true;
+}
+
 async function startScan() {
   const box = document.getElementById('reader');
   box.hidden = false;
@@ -132,6 +228,7 @@ async function startScan() {
       video.style.width = '100%';
       box.replaceChildren(video);
       scanning = true;
+      let lastZxing = 0;
       const loop = async () => {
         if (!scanning) {
           stream.getTracks().forEach((t) => t.stop());
@@ -139,14 +236,16 @@ async function startScan() {
         }
         try {
           const codes = await detector.detect(video);
-          if (codes && codes[0] && codes[0].rawValue) {
-            scanning = false;
-            stream.getTracks().forEach((t) => t.stop());
-            document.getElementById('barcode-input').value = codes[0].rawValue;
-            lookupBarcode(codes[0].rawValue);
-            return;
-          }
+          if (codes && codes[0] && codes[0].rawValue && onBarcodeFound(codes[0].rawValue)) return;
         } catch { /* frame without barcode */ }
+        const now = Date.now();
+        if (now - lastZxing > 450) {
+          lastZxing = now;
+          try {
+            const code = await decodeVideoFrame(video);
+            if (code && onBarcodeFound(code)) return;
+          } catch { /* keep scanning */ }
+        }
         requestAnimationFrame(loop);
       };
       video.addEventListener('loadeddata', () => requestAnimationFrame(loop));
@@ -163,10 +262,21 @@ async function startScan() {
     html5 = new Html5Qrcode('reader');
     scanning = true;
     await html5.start({ facingMode: 'environment' }, { fps: 8, qrbox: 220 }, (text) => {
-      document.getElementById('barcode-input').value = text;
-      stopScan();
-      lookupBarcode(text);
+      onBarcodeFound(text);
     });
+    // Stronger 1-D decoder on captured frames (helps dim / angled EAN-13).
+    const video = document.querySelector('#reader video');
+    if (video) {
+      const tick = async () => {
+        if (!scanning) return;
+        try {
+          const code = await decodeVideoFrame(video);
+          if (code && onBarcodeFound(code)) return;
+        } catch { /* keep scanning */ }
+        setTimeout(tick, 500);
+      };
+      setTimeout(tick, 600);
+    }
   } catch {
     toast('Kamera tidak dapat dibuka. Izinkan kamera, atau ketik kodenya.');
   }
@@ -188,16 +298,52 @@ async function stopScan() {
   }
 }
 
-async function lookupBarcode(code) {
+function bindNotFoundActions(root) {
+  const ocr = root.querySelector('#nf-ocr');
+  const typ = root.querySelector('#nf-type');
+  if (ocr) ocr.addEventListener('click', () => {
+    const btn = document.getElementById('ocr-btn');
+    if (btn) btn.click();
+    const ta = document.getElementById('ing-text');
+    if (ta) ta.scrollIntoView({ block: 'center' });
+  });
+  if (typ) typ.addEventListener('click', () => {
+    const ta = document.getElementById('ing-text');
+    if (!ta) return;
+    ta.scrollIntoView({ block: 'center' });
+    ta.classList.add('ing-text-focus');
+    ta.focus();
+    setTimeout(() => ta.classList.remove('ing-text-focus'), 2500);
+  });
+}
+
+function showNotFound(code, extra = '') {
+  const out = document.getElementById('halal-result');
+  out.innerHTML = `
+    <div class="verdict unknown" data-testid="not-found">
+      <div class="label">Tidak ditemukan</div>
+      <div class="word">Produk belum ada di database</div>
+      <p>Kode ${escapeHtml(code)} tidak tercatat di Open Food Facts. Kamu tetap bisa memeriksa dari kemasan.${extra ? ' ' + extra : ''}</p>
+      <div class="notfound-actions btn-row">
+        <button type="button" class="btn" id="nf-ocr">Foto komposisi (OCR)</button>
+        <button type="button" class="btn secondary" id="nf-type">Ketik komposisi</button>
+      </div>
+    </div>`;
+  bindNotFoundActions(out);
+}
+
+async function lookupBarcode(raw) {
+  const code = normalizeBarcode(raw);
   if (!code) { toast('Masukkan kode batang.'); return; }
   const out = document.getElementById('halal-result');
   out.innerHTML = '<p class="empty">Mencari di Open Food Facts…</p>';
   const url = `https://world.openfoodfacts.org/api/v2/product/${encodeURIComponent(code)}.json`;
   try {
     const res = await fetch(url, { headers: { Accept: 'application/json' } });
-    const data = await res.json();
+    let data = null;
+    try { data = await res.json(); } catch { data = null; }
     if (!data || data.status !== 1 || !data.product) {
-      out.innerHTML = `<div class="verdict unknown"><div class="label">Tidak ditemukan</div><div class="word">?</div><p>Kode ${escapeHtml(code)} tidak ada di Open Food Facts. Periksa manual lewat teks bahan.</p></div>`;
+      showNotFound(code);
       return;
     }
     const p = data.product;
@@ -207,7 +353,12 @@ async function lookupBarcode(code) {
     const image = productImageOf(p);
     showVerdict({ source: `Open Food Facts · kode ${code}`, name, text, labels, brands: p.brands, example: false, product: p, image, code });
   } catch {
-    out.innerHTML = '<p class="empty">Gagal menghubungi Open Food Facts. Periksa koneksi, atau tempel teks bahan.</p>';
+    out.innerHTML = `<p class="empty">Gagal menghubungi Open Food Facts. Periksa koneksi, atau periksa dari kemasan.</p>
+      <div class="notfound-actions btn-row">
+        <button type="button" class="btn" id="nf-ocr">Foto komposisi (OCR)</button>
+        <button type="button" class="btn secondary" id="nf-type">Ketik komposisi</button>
+      </div>`;
+    bindNotFoundActions(out);
   }
 }
 
