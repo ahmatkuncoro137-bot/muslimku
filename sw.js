@@ -1,12 +1,14 @@
-const CACHE = 'muslimku-v4';
+const CACHE = 'muslimku-v5';
 const PRECACHE = [
   "./",
   "./assets/art/mosque.svg",
-  "./assets/azan/azan-aaqib-azeez.mp3",
   "./assets/azan/azan-adam-synagda.mp3",
-  "./assets/azan/azan-andrewler.mp3",
-  "./assets/azan/azan-mahfoudou.mp3",
-  "./assets/azan/azan-sabah-fakhry.mp3",
+  "./assets/azan/azan-madinah-nabawi.mp3",
+  "./assets/azan/azan-makkah-haram.mp3",
+  "./assets/azan/azan-makkah-maghrib.mp3",
+  "./assets/azan/azan-sabah-fakhri.mp3",
+  "./assets/azan/azan-shalqar.mp3",
+  "./assets/azan/azan-subuh-malmo.mp3",
   "./assets/examples/nissin-front.jpg",
   "./assets/examples/yakult-front.jpg",
   "./assets/fonts/NotoNaskhArabic.ttf",
@@ -37,6 +39,9 @@ const PRECACHE = [
   "./js/vendor/adhan.umd.min.js",
   "./js/vendor/html5-qrcode.LICENSE",
   "./js/vendor/html5-qrcode.min.js",
+  "./js/vendor/zxing-wasm/LICENSE",
+  "./js/vendor/zxing-wasm/es/reader/index.js",
+  "./js/vendor/zxing-wasm/es/share.js",
   "./manifest.json",
   "./package.json"
 ];

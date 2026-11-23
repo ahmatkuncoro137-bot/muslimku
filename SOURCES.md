@@ -17,17 +17,25 @@ Aplikasi original bernama **Muslimku** (bukan salinan Muslim Pro atau Halal Japa
 
 ## Azan
 
-Berkas disimpan lokal di `assets/azan/`, diunduh dari Wikimedia Commons:
+Berkas disimpan lokal di `assets/azan/`. Sumber hanya yang lisensinya jelas mengizinkan pemakaian ulang (domain publik, CC0, CC BY, CC BY-SA — **bukan** NC/ND). Audio diekstrak bila perlu, keheningan di ujung dipotong, kerasnya dinormalisasi (`ffmpeg loudnorm` I=−16), lalu di-encode MP3 128 kbps. **Maqam/gaya hanya ditulis jika tercantum di halaman sumber; tidak dikarang.** Tidak ditemukan rekaman azan di Commons yang secara eksplisit berlabel maqam Hijaz, atau azan Mesir/Turki lengkap 2–5 menit berlisensi jelas (ada cuplikan pendek “Adhan in Istanbul”, CC0, ±50 dtk — terlalu singkat untuk azan penuh).
 
 | Berkas | Penulis | Lisensi | Sumber |
 |---|---|---|---|
+| azan-makkah-haram.mp3 | Seyfula Islam | CC BY 3.0 | [Adhan, Great Mosque of Mecca - Jan 21, 2013.webm](https://commons.wikimedia.org/wiki/File:Adhan,_Great_Mosque_of_Mecca_-_Jan_21,_2013.webm) |
+| azan-madinah-nabawi.mp3 | ejaz215 | CC BY 3.0 | [33937 ejaz215 call-to-prayer-from-the-prophet-s-mo.ogg](https://commons.wikimedia.org/wiki/File:33937_ejaz215_call-to-prayer-from-the-prophet-s-mo.ogg) |
+| azan-makkah-maghrib.mp3 | 3omar Faruq | CC BY 3.0 | [Maghrib Adhan at the Masjid al Haram, Mecca - 25 Feb, 2012.webm](https://commons.wikimedia.org/wiki/File:Maghrib_Adhan_at_the_Masjid_al_Haram,_Mecca_-_25_Feb,_2012.webm) |
+| azan-subuh-malmo.mp3 | Islamic Center Malmö | CC BY 3.0 | [Eid al-Fitr Fajr azan at Malmö Mosque - 19 August 2012.webm](https://commons.wikimedia.org/wiki/File:Eid_al-Fitr_Fajr_azan_at_Malmö_Mosque_-_19_August_2012.webm) |
+| azan-sabah-fakhri.mp3 | Sabah Fakhri | Domain publik | [Call to prayer by Sabah Fakhry.mp3](https://commons.wikimedia.org/wiki/File:Call_to_prayer_by_Sabah_Fakhry.mp3) |
 | azan-adam-synagda.mp3 | Adam-synagda | CC0 1.0 | [Beautiful adhan.ogg](https://commons.wikimedia.org/wiki/File:Beautiful_adhan.ogg) |
-| azan-andrewler.mp3 | Andrewler | CC BY-SA 4.0 | [Azan.ogg](https://commons.wikimedia.org/wiki/File:Azan.ogg) |
-| azan-sabah-fakhry.mp3 | Sabah Fakhri | Domain publik | [Call to prayer by Sabah Fakhry.mp3](https://commons.wikimedia.org/wiki/File:Call_to_prayer_by_Sabah_Fakhry.mp3) |
-| azan-aaqib-azeez.mp3 | Aaqib Azeez / Atcovi | CC BY-SA 4.0 | [The Adhan - Aaqib Azeez.mp3](https://commons.wikimedia.org/wiki/File:The_Adhan_-_Muslim_Call_to_Prayer_-_Aaqib_Azeez.mp3) |
-| azan-mahfoudou.mp3 | Mahfoudou | CC BY-SA 4.0 | [Islamic call to worship.oga](https://commons.wikimedia.org/wiki/File:Islamic_call_to_worship.oga) |
+| azan-shalqar.mp3 | Esetok | CC BY-SA 4.0 | [Adhan in Shalqar mosque.webm](https://commons.wikimedia.org/wiki/File:Adhan_in_Shalqar_mosque.webm) |
 
-Atribusi ditampilkan di menu Azan (wajib untuk CC BY-SA).
+Atribusi ditampilkan di menu Azan (wajib untuk CC BY / CC BY-SA).
+
+## Pemindai kode batang (Halal Pro)
+
+- Kamera: `BarcodeDetector` (jika ada) atau html5-qrcode, plus pembacaan bingkai dengan [zxing-wasm 3.1.7](https://github.com/Sec-ant/zxing-wasm) (MIT, ZXing-C++ ke WebAssembly) yang dimuat saat diperlukan (`js/vendor/zxing-wasm/`, tidak di-precache). Ini menolong foto EAN-13 yang miring atau redup — html5-qrcode saja gagal pada foto karton 4951228004102, zxing-cpp/wasm berhasil.
+- Tombol **Foto kode batang** dan kolom ketik kode tetap ada.
+- Jika produk tidak ada di Open Food Facts (API v2 status 0 / HTTP 404), aplikasi menampilkan **“Produk belum ada di database”** plus tombol **Foto komposisi (OCR)** dan **Ketik komposisi**.
 
 ## Doa dari Al-Qur'an
 
