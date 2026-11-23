@@ -1,12 +1,70 @@
 {
   "meta": {
-    "note": "Berkas azan diunduh dari Wikimedia Commons dan disimpan lokal agar alarm tetap bunyi tanpa internet. Kredit dan lisensi wajib ditampilkan."
+    "note": "Berkas azan diunduh dari Wikimedia Commons, dipotong keheningan di ujung, dinormalisasi kerasnya (ffmpeg loudnorm), dan disimpan lokal sebagai MP3 128 kbps. Kredit dan lisensi wajib ditampilkan. Maqam/gaya hanya ditulis jika tercantum di sumber — tidak dikarang."
   },
   "voices": [
     {
+      "id": "makkah-haram",
+      "name": "Masjidil Haram, Makkah",
+      "name_id": "Masjidil Haram, Makkah (Jan 2013)",
+      "style": "Rekaman di Masjidil Haram, Makkah",
+      "file": "assets/azan/azan-makkah-haram.mp3",
+      "source": "Wikimedia Commons — File:Adhan, Great Mosque of Mecca - Jan 21, 2013.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adhan,_Great_Mosque_of_Mecca_-_Jan_21,_2013.webm",
+      "license": "CC BY 3.0",
+      "author": "Seyfula Islam",
+      "note": "Audio diekstrak dari video, awal sunyi ~8 detik dipotong, lalu dinormalisasi."
+    },
+    {
+      "id": "madinah-nabawi",
+      "name": "Masjid Nabawi, Madinah",
+      "name_id": "Masjid Nabawi, Madinah",
+      "style": "Rekaman di Masjid Nabawi, Madinah",
+      "file": "assets/azan/azan-madinah-nabawi.mp3",
+      "source": "Wikimedia Commons — File:33937 ejaz215 call-to-prayer-from-the-prophet-s-mo.ogg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:33937_ejaz215_call-to-prayer-from-the-prophet-s-mo.ogg",
+      "license": "CC BY 3.0",
+      "author": "ejaz215",
+      "note": "Sumber: “Islamic call to prayer from the prophet mosque.”"
+    },
+    {
+      "id": "makkah-maghrib",
+      "name": "Maghrib di Masjidil Haram",
+      "name_id": "Maghrib di Masjidil Haram, Makkah (Feb 2012)",
+      "style": "Rekaman Maghrib di Masjidil Haram, Makkah",
+      "file": "assets/azan/azan-makkah-maghrib.mp3",
+      "source": "Wikimedia Commons — File:Maghrib Adhan at the Masjid al Haram, Mecca - 25 Feb, 2012.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Maghrib_Adhan_at_the_Masjid_al_Haram,_Mecca_-_25_Feb,_2012.webm",
+      "license": "CC BY 3.0",
+      "author": "3omar Faruq",
+      "note": "Audio diekstrak dari video “Waiting for the Maghrib prayer at the Haram in Makkah.”"
+    },
+    {
+      "id": "subuh-malmo",
+      "name": "Azan Subuh, Masjid Malmö",
+      "name_id": "Azan Subuh (Fajr) — Masjid Malmö, 19 Agu 2012",
+      "style": "Azan Fajr / Subuh (sumber menyebut Fajr azan)",
+      "file": "assets/azan/azan-subuh-malmo.mp3",
+      "source": "Wikimedia Commons — File:Eid al-Fitr Fajr azan at Malmö Mosque - 19 August 2012.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eid_al-Fitr_Fajr_azan_at_Malmö_Mosque_-_19_August_2012.webm",
+      "license": "CC BY 3.0",
+      "author": "Islamic Center Malmö",
+      "note": "Audio diekstrak dari video azan Fajr Idulfitri. Label Subuh/Fajr mengikuti keterangan sumber."
+    },
+    {
+      "id": "sabah-fakhri",
+      "name": "Sabah Fakhri",
+      "name_id": "Sabah Fakhri",
+      "file": "assets/azan/azan-sabah-fakhri.mp3",
+      "source": "Wikimedia Commons — File:Call to prayer by Sabah Fakhry.mp3",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Call_to_prayer_by_Sabah_Fakhry.mp3",
+      "license": "Public domain",
+      "author": "Sabah Fakhri (1934–2021)"
+    },
+    {
       "id": "adam-synagda",
       "name": "Adam Synagda",
-      "name_id": "Adam Synagda (nada tenang)",
+      "name_id": "Adam Synagda",
       "file": "assets/azan/azan-adam-synagda.mp3",
       "source": "Wikimedia Commons — File:Beautiful adhan.ogg",
       "source_url": "https://commons.wikimedia.org/wiki/File:Beautiful_adhan.ogg",
@@ -14,44 +72,15 @@
       "author": "Adam-synagda"
     },
     {
-      "id": "andrewler",
-      "name": "Andrewler",
-      "name_id": "Andrewler (nada klasik)",
-      "file": "assets/azan/azan-andrewler.mp3",
-      "source": "Wikimedia Commons — File:Azan.ogg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Azan.ogg",
+      "id": "shalqar",
+      "name": "Masjid Shalqar",
+      "name_id": "Masjid Matey Qoqanuly, Shalqar (Kazakhstan)",
+      "file": "assets/azan/azan-shalqar.mp3",
+      "source": "Wikimedia Commons — File:Adhan in Shalqar mosque.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adhan_in_Shalqar_mosque.webm",
       "license": "CC BY-SA 4.0",
-      "author": "Andrewler"
-    },
-    {
-      "id": "sabah-fakhry",
-      "name": "Sabah Fakhry",
-      "name_id": "Sabah Fakhry (nada Syam)",
-      "file": "assets/azan/azan-sabah-fakhry.mp3",
-      "source": "Wikimedia Commons — File:Call to prayer by Sabah Fakhry.mp3",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Call_to_prayer_by_Sabah_Fakhry.mp3",
-      "license": "Public domain",
-      "author": "Sabah Fakhri (1934–2021)"
-    },
-    {
-      "id": "aaqib-azeez",
-      "name": "Aaqib Azeez",
-      "name_id": "Aaqib Azeez (nada ringkas)",
-      "file": "assets/azan/azan-aaqib-azeez.mp3",
-      "source": "Wikimedia Commons — File:The Adhan - Muslim Call to Prayer - Aaqib Azeez.mp3",
-      "source_url": "https://commons.wikimedia.org/wiki/File:The_Adhan_-_Muslim_Call_to_Prayer_-_Aaqib_Azeez.mp3",
-      "license": "CC BY-SA 4.0",
-      "author": "Aaqib Azeez / Atcovi"
-    },
-    {
-      "id": "mahfoudou",
-      "name": "Mahfoudou",
-      "name_id": "Mahfoudou (nada panjang)",
-      "file": "assets/azan/azan-mahfoudou.mp3",
-      "source": "Wikimedia Commons — File:Islamic call to worship.oga",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Islamic_call_to_worship.oga",
-      "license": "CC BY-SA 4.0",
-      "author": "Mahfoudou"
+      "author": "Esetok",
+      "note": "Audio diekstrak dari video di masjid Shalkar, Aktobe, Kazakhstan."
     }
   ]
 }
